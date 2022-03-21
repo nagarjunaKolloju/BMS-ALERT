@@ -12,13 +12,13 @@ def send_mail():
 		auth=("api", "110b22b11f4bb2e40e60f90ced220f1f-0677517f-15ef2a9e"),
 		data={"from": "Mailgun Sandbox <postmaster@sandbox11f72a48f8bb44ec81834fc71cbabf61.mailgun.org>",
 			"to": "Nagarjuna <ninjaforyou69@gmail.com>",
-			"subject": "BOOKINGS ARE OPEN",
+			"subject": "ALERT",
 			"text": "BOOKINGS ARE OPEN"})
 
 
 while(True):
     res = requests.get(
-        'https://in.bookmyshow.com/buytickets/rrr-tirupati/movie-tiru-ET00094579-MT/20220321')
+        'https://in.bookmyshow.com/buytickets/radhe-shyam-tirupati/movie-tiru-ET00135230-MT/20220322')
     if(res.text.find('PGR Cinemas') != -1):
         print("BOOKINGS ARE NOW OPEN!")
         send_mail()
